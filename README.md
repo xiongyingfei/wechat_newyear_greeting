@@ -15,11 +15,11 @@
 
 | 快捷键 | 功能 |
 |--------|------|
-| `Alt+1` | 学生风格回复 |
-| `Alt+2` | 毕业学生/青年教师风格回复 |
-| `Alt+3` | 同行资深教授风格回复 |
-| `Alt+4` | 熟人风格回复 |
-| `Alt+5` | 通用/简单风格回复 |
+| `Alt+1` | 风格1回复（可自定义） |
+| `Alt+2` | 风格2回复（可自定义） |
+| `Alt+3` | 风格3回复（可自定义） |
+| `Alt+4` | 风格4回复（可自定义） |
+| `Alt+5` | 风格5回复（可自定义） |
 | `Ctrl+Alt+N` | 手动输入联系人姓名（OCR 失败时备用） |
 | `Ctrl+Shift+Q` | 停止程序 |
 
@@ -133,37 +133,24 @@ pip install -r requirements.txt
 copy config\replies.yaml.example config\replies.yaml
 ```
 
-然后编辑 `config/replies.yaml` 自定义回复模板：
+然后编辑 `config/replies.yaml` 自定义回复模板。配置示例：
 
 ```yaml
-# 快捷键配置
-# 可用变量: {name} 全名, {surname} 姓, {given_name} 名
 hotkeys:
   "alt+1":
-    name: "学生"
+    name: "长辈"
     replies:
-      - "谢谢，{name}同学过年好！祝新春快乐，马年大吉！"
+      - "{surname}阿姨新年好！祝您身体健康！"
+      - "过年好！祝您阖家幸福！"
 
   "alt+2":
-    name: "毕业学生/青年教师"
+    name: "朋友"
     replies:
-      - "谢谢，{surname}老师新春快乐啊！祝马年大吉！"
-
-  "alt+3":
-    name: "同行资深教授"
-    replies:
-      - "谢谢，祝{surname}老师新春快乐，马年大吉！"
-
-  "alt+4":
-    name: "熟人"
-    replies:
-      - "{name}新年好啊！祝马年大吉，万事如意！"
-
-  "alt+5":
-    name: "其他"
-    replies:
-      - "谢谢，祝马年大吉，万事如意！"
+      - "{name}新年好！"
+      - "过年好！新的一年多多约饭！"
 ```
+
+支持的占位符：`{name}`（全名）、`{surname}`（姓）、`{given_name}`（名）。
 
 > **注意**：`config/replies.yaml` 已加入 `.gitignore`，你的私人配置不会被提交到 GitHub。
 
@@ -181,11 +168,11 @@ python main.py
 
 1. 在微信中打开任意聊天窗口
 2. **直接按快捷键**（无需任何前置操作）：
-   - `Alt+1` - 学生风格
-   - `Alt+2` - 毕业学生/青年教师风格
-   - `Alt+3` - 同行资深教授风格
-   - `Alt+4` - 熟人风格
-   - `Alt+5` - 通用/简单风格
+   - `Alt+1` - 风格1
+   - `Alt+2` - 风格2
+   - `Alt+3` - 风格3
+   - `Alt+4` - 风格4
+   - `Alt+5` - 风格5
 3. 程序会自动截图识别联系人姓名，生成回复并粘贴到输入框
 4. 在微信中按 `Enter` 发送消息
 
