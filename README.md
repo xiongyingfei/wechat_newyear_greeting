@@ -114,6 +114,10 @@ wechat-new-year-helper/
 - Tesseract OCR（可选，作为备用 OCR 引擎）
   - 下载安装：https://github.com/UB-Mannheim/tesseract/wiki
   - 默认安装路径：`C:\Program Files\Tesseract-OCR\`
+  - **中文语言包**：如需使用 Tesseract，还需下载中文简体语言包：
+    - 下载地址：https://github.com/tesseract-ocr/tessdata
+    - 下载 `chi_sim.traineddata` 文件
+    - 放置在项目根目录的 `tessdata/` 文件夹中，或 Tesseract 安装目录的 `tessdata/` 文件夹中
 
 ### 1. 安装依赖
 
