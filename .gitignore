@@ -43,3 +43,6 @@ Thumbs.db
 # Tesseract traineddata (large binary files)
 *.traineddata
 tessdata/
+
+# Personal configuration (keep your private replies out of git)
+config/replies.yaml
