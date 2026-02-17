@@ -127,7 +127,13 @@ pip install -r requirements.txt
 
 ### 2. 配置文件
 
-编辑 `config/replies.yaml` 自定义回复模板：
+首次使用时，复制示例配置文件：
+
+```bash
+copy config\replies.yaml.example config\replies.yaml
+```
+
+然后编辑 `config/replies.yaml` 自定义回复模板：
 
 ```yaml
 # 快捷键配置
@@ -136,17 +142,17 @@ hotkeys:
   "alt+1":
     name: "学生"
     replies:
-      - "谢谢，{name}同学过年好！祝新春快乐，马年大吉，新年成果多多！"
+      - "谢谢，{name}同学过年好！祝新春快乐，马年大吉！"
 
   "alt+2":
     name: "毕业学生/青年教师"
     replies:
-      - "谢谢，{surname}老师新春快乐啊！祝马年大吉，新年成果多多！"
+      - "谢谢，{surname}老师新春快乐啊！祝马年大吉！"
 
   "alt+3":
     name: "同行资深教授"
     replies:
-      - "谢谢，祝{surname}老师新春快乐，马年大吉！新的一年请您多指教！"
+      - "谢谢，祝{surname}老师新春快乐，马年大吉！"
 
   "alt+4":
     name: "熟人"
@@ -158,6 +164,8 @@ hotkeys:
     replies:
       - "谢谢，祝马年大吉，万事如意！"
 ```
+
+> **注意**：`config/replies.yaml` 已加入 `.gitignore`，你的私人配置不会被提交到 GitHub。
 
 ## 使用流程
 
