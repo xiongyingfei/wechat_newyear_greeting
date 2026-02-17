@@ -1,0 +1,10 @@
+keyboard
+pyyaml
+pywin32
+pyperclip
+opencv-python
+numpy
+mss
+rapidocr_onnxruntime
+pytesseract
+Pillow
